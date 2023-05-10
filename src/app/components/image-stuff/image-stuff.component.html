@@ -1,0 +1,12 @@
+<h1>Upload an Image</h1>
+<input type="file" accept=".jpg,.png" (change)="onImageSelected($event)" />
+<div class="images-container" *ngIf="imgUrl">
+  <div class="image-card">
+    <img [src]="imgUrl" alt="uncompressed image" />
+    <p>{{ originalBytes | userFriendlyBytes : 2 }}</p>
+  </div>
+  <div class="image-card" *ngIf="compressedImgUrl">
+    <img [src]="compressedImgUrl" alt="compressed image" />
+    <p>{{ compressedBytes | userFriendlyBytes : 2 }}</p>
+  </div>
+</div>

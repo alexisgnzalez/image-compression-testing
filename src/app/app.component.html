@@ -1,12 +1,8 @@
-<h1>Upload an Image</h1>
-<input type="file" accept=".jpg,.png" (change)="onImageSelected($event)" />
-<img *ngIf="imgUrl" [src]="imgUrl" alt="imagen de pruebas" />
+<h2>Select guachuguannadu:</h2>
 
-<h1>Upload a pdf</h1>
-<input type="file" accept=".pdf" (change)="onFileSelected($event)" />
-<iframe
-  title="tituliando"
-  style="width: 100%; height: 500px"
-  *ngIf="pdfUrl"
-  [src]="pdfUrl"
-></iframe>
+<div class="links-container">
+  <a routerLink="/image-stuff">Image Compression</a>
+  <a routerLink="/pdf-stuff">Show base64 PDF</a>
+</div>
+
+<router-outlet></router-outlet>
